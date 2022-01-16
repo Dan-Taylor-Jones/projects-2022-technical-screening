@@ -31,26 +31,22 @@ var assert = require("assert")
 // Explanation: Empty array...
 
 const altNumbers = (numArray) => {
-    const positiveArray;
-    const negativeArray;
+    const positiveArray = [];
+    const negativeArray = [];
     let numArrayLength = numArray.length;
-    let i = 0;
-    let j = 0;
-    let k = 0;
+    var i = 0;
     while (i < numArrayLength) {
         if (numArray[i] >= 0) {
-            positiveArray[j] = numArray[i];
-            j++;
+            positiveArray[positiveArray.length] = numArray[i];
         } else if (numArray[i] < 0) {
-            negativeArray[k] = numArray[i];
-            k++;
+            negativeArray[negativeArray.length] = numArray[i];
         }
         i++;
     }  
     i = 0;
-    j = 0;
-    k = 0;
-    const newArray;
+    var j = 0;
+    var k = 0;
+    const newArray = [];
     //to account for negative array being larger than positive or visa versa
     if (negative.length >= positiveArray.length) {
         while (i < numArrayLength) {
@@ -63,7 +59,7 @@ const altNumbers = (numArray) => {
             }
             i++;
         }
-    else {
+    } else {
         while (i < numArrayLength) {
             if  (i % 2 == 0 && j < negativeArray.length) {
                 newArray[i] = negativeArray[j]
